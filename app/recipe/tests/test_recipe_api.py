@@ -25,6 +25,7 @@ def detail_url(recipe_id):
     """Create and return a recipe detail url"""
     return reverse('recipe:recipe-detail', args=[recipe_id])
 
+
 def create_recipe(user, **params):
     """Create and return a recipe"""
     defaults = {
@@ -49,7 +50,6 @@ class PublicRecipeAPITests(TestCase):
         res = self.client.get(RECIPES_URL)
 
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
-
 
 
 class PrivateRecipeAPITests(TestCase):
