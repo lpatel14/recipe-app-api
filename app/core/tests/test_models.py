@@ -12,6 +12,7 @@ from core import models
 def create_user(email='user@example.com', password='testpass123'):
     return get_user_model().object.create_user(email, password)
 
+
 class ModelTests(TestCase):
     """Test Models """
 
